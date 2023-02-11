@@ -1,0 +1,32 @@
+{
+  "name": "island-taobao-hack",
+  "version": "1.0.0",
+  "description": "Island (小蓝岛) 淘宝商品数字 id 转联盟字符 id 解决方案 (开源版)",
+  "main": "taobao/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Blue-Island-X/Island-Taobao-Hack.git"
+  },
+  "keywords": [
+    "taobao",
+    "taobaoke",
+    "alimama"
+  ],
+  "author": "开封小蓝岛科技有限公司",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Blue-Island-X/Island-Taobao-Hack/issues"
+  },
+  "homepage": "https://github.com/Blue-Island-X/Island-Taobao-Hack#readme",
+  "dependencies": {
+    "island-union-sdk": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.1.1",
+    "@types/node": "^18.13.0",
+    "@types/qs": "^6.9.7"
+  }
+}

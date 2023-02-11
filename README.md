@@ -1,3 +1,4 @@
+# 小蓝岛淘宝商品数字 id 转联盟字符 id 解决方案 (开源版)
 ## 1.前情提要
 
 淘宝联盟必须使用新版的联盟字符 id 进行传参来获取商品信息，但是淘宝联盟官方不肯开放转换接口权限给不是比价场景的应用  
@@ -21,3 +22,34 @@
 ![淘宝联盟牛逼老哥](https://raw.githubusercontent.com/Blue-Island-X/Island-Taobao-Hack/master/resource/DingTalk_urNiroEBPT.png)
 
 ~~所以说群友们的攻击性有待提高，素质有待降低~~
+
+## 2.实现原理
+
+一位群友在群里发了一张图片, 通过直接搜索链接可以返回商品信息但是不会返回商品 id 和链接
+
+![淘宝联盟官方群友方法](https://raw.githubusercontent.com/Blue-Island-X/Island-Taobao-Hack/master/resource/DingTalk_YgbzJ7xGTW.png)
+
+我们可以通过标题 ``title`` 进行搜索，再根据卖家标识符 ``seller_id`` 再加上大图链接 ``pict_url`` 或者白底图链接 ``white_image`` 做一个匹配
+
+## 3.如何安装
+
+```
+npm i island-taobao-hack --save
+```
+
+> P.S: 本项目依赖于 [Island-Union-SDK](https://github.com/Blue-Island-X/Island-Union-SDK)
+
+## 4.如何使用
+
+```TypeScript
+import island from 'island-union-sdk';
+import taobao from 'island-taobao-hack';
+
+const client = new island.taobao.Client({
+    appKey: '<你的 AppKey>',
+    secretKey: '<你的 SecretKey>'
+});
+const hack = new taobao.TaobaoHack(client);
+
+const result = await hack.getGoodsIdV2('<商品数字 id>', '<你的广告位 id>');
+```
