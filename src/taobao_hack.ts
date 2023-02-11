@@ -7,8 +7,13 @@ export class TaobaoHack {
         this.taobaoClient = client;
     }
 
-    async getGoodsById(goodsId: string, adzoneId: string, precise: boolean = true) {
-        const goodsLink = `https://item.taobao.com/item.html?id=${goodsId}`;
+    async getGoodsById(goodsId: string, adzoneId: string, tmall: boolean = false, precise: boolean = true) {
+        let goodsLink;
+        if (tmall) {
+            goodsLink = `https://detail.tmall.com/item.htm?id=${goodsId}`;
+        } else {
+            goodsLink = `https://item.taobao.com/item.htm?id=${goodsId}`;
+        }
 
         const goodsResult = await this.taobaoClient.execute('taobao.tbk.dg.material.optional', { q: goodsLink, adzone_id: adzoneId });
         if (goodsResult.error) {

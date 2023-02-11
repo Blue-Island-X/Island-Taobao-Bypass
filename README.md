@@ -53,7 +53,7 @@ const client = new island.taobao.Client({
 });
 const hack = new taobao.TaobaoHack(client);
 
-const result = await hack.getGoodsById('<商品数字 id>', '<你的广告位 id>', <是否开启精确模式>);
+const result = await hack.getGoodsById('<商品数字 id>', '<你的广告位 id>', <是否是天猫商品 (默认为否)>, <是否开启精确模式 (默认为是)>);
 ```
 
 > P.S: 在精确模式中, 会请求商品信息两次 (避免低概率的白底图或者主图更换导致匹配不到商品的问题)
