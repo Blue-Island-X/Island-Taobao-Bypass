@@ -1,6 +1,6 @@
 {
   "name": "island-taobao-bypass",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Island (小蓝岛) 淘宝商品数字 id 转联盟字符 id 解决方案 (开源版)",
   "main": "taobao/index.js",
   "scripts": {
