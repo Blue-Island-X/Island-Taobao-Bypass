@@ -1,10 +1,10 @@
 {
   "name": "island-taobao-bypass",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Island (小蓝岛) 淘宝商品数字 id 转联盟字符 id 解决方案 (开源版)",
   "main": "taobao/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/Blue-Island-X/Island-Taobao-Bypass#readme",
   "dependencies": {
-    "island-union-sdk": "^1.0.4"
+    "island-union-sdk": "^1.0.5"
   },
   "devDependencies": {
     "@types/crypto-js": "^4.1.1",
