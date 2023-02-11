@@ -53,5 +53,13 @@ const client = new island.taobao.Client({
 });
 const hack = new taobao.TaobaoHack(client);
 
-const result = await hack.getGoodsIdV2('<商品数字 id>', '<你的广告位 id>');
+const result = await hack.getGoodsById('<商品数字 id>', '<你的广告位 id>', <是否开启精确模式>);
 ```
+
+> P.S: 在精确模式中, 会请求商品信息两次 (避免低概率的白底图或者主图更换导致匹配不到商品的问题)
+
+## 5.注意事项
+
+在 1.0.1 以及之后版本中, **整个商品**的信息都会被返回, 不再单独返回商品 id  
+
+数据结构可以参考该链接: https://open.taobao.com/api.htm?docId=35896&docType=2

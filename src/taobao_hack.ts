@@ -7,7 +7,7 @@ export class TaobaoHack {
         this.taobaoClient = client;
     }
 
-    async getGoodsIdV2(goodsId: string, adzoneId: string, precise: boolean = true) {
+    async getGoodsById(goodsId: string, adzoneId: string, precise: boolean = true) {
         const goodsLink = `https://item.taobao.com/item.html?id=${goodsId}`;
 
         const goodsResult = await this.taobaoClient.execute('taobao.tbk.dg.material.optional', { q: goodsLink, adzone_id: adzoneId });
@@ -46,14 +46,14 @@ export class TaobaoHack {
         }
 
         for (const goods of searchList) {
-            if (goods.seller_id === goodsInfo.seller_id && (goods.white_image === goodsInfo.white_image || goods.pict_url === goodsInfo.pict_url)) {
-                if (precise) {
-                    if (goods.white_image === goodsInfo2.white_image || goods.pict_url === goodsInfo2.pict_url) {
-                        return { goodsIdV2: goods.item_id };
-                    }
-                } else {
-                    return { goodsIdV2: goods.item_id };
-                }
+            /**
+             * 是否是同一商品的条件:
+             * 1. 店铺 id 是否相等 (必须)
+             * 2. 商品白底图或主图与第一次搜索的相同 (或运算)
+             * 3. 开启精确模式并且商品白底图或或主图与第二次搜索的相同 (或运算)
+            */
+            if (goods.seller_id === goodsInfo.seller_id && ((goods.white_image === goodsInfo.white_image || goods.pict_url === goodsInfo.pict_url) || (precise && (goods.white_image === goodsInfo2.white_image || goods.pict_url === goodsInfo2.pict_url)))) {
+                return goods;
             }
         }
 
