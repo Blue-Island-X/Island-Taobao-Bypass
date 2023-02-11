@@ -1,10 +1,12 @@
 import island from 'island-union-sdk';
 
 export class TaobaoHack {
+    limit: number;
     taobaoClient: InstanceType<typeof island.taobao.Client>;
 
-    constructor(client: InstanceType<typeof island.taobao.Client>) {
+    constructor(client: InstanceType<typeof island.taobao.Client>, limit: number = 10) {
         this.taobaoClient = client;
+        this.limit = limit;
     }
 
     private equal(left: string, right: string) {
@@ -33,7 +35,7 @@ export class TaobaoHack {
         var index = 1;
         let searchList : any[] = [];
         while (true) {
-            const searchResult = await this.taobaoClient.execute('taobao.tbk.dg.material.optional', { q: goodsInfo.short_title, adzone_id: adzoneId, page_no: index, page_size: 100 });
+            const searchResult = await this.taobaoClient.execute('taobao.tbk.dg.material.optional', { q: goodsInfo.title, adzone_id: adzoneId, page_no: index, page_size: 100, sort: 'match_des' });
             if (searchResult.error) {
                 return searchResult;
             }
@@ -41,9 +43,9 @@ export class TaobaoHack {
             const searchInfo = searchResult.result_list.map_data;
             searchList.push.apply(searchList, searchInfo);
 
-            if (searchInfo.length !== 100) {
+            if (searchInfo.length !== 100 || index >= this.limit) {
                 break;
-            } else{
+            } else {
                 index += 1;
             }
         }
