@@ -29,7 +29,7 @@
 
 ![淘宝联盟官方群友方法](https://raw.githubusercontent.com/Blue-Island-X/Island-Taobao-Hack/master/resource/DingTalk_YgbzJ7xGTW.png)
 
-我们可以通过短标题 ``short_title`` 进行搜索，再根据卖家标识符 ``seller_id`` 再加上大图链接 ``pict_url`` 或者白底图链接 ``white_image`` 做一个匹配
+我们可以通过标题 ``title`` 进行搜索，再根据卖家标识符 ``seller_id`` 再加上大图链接 ``pict_url`` 或者白底图链接 ``white_image`` 做一个匹配
 
 > P.S: 精确标题无法使用，淘宝联盟会不返回商品 id 等信息
 
@@ -51,7 +51,7 @@ const client = new island.taobao.Client({
     appKey: '<你的 AppKey>',
     secretKey: '<你的 SecretKey>'
 });
-const hack = new taobao.TaobaoHack(client);
+const hack = new taobao.TaobaoHack(client, <最大搜索限制 (默认 10 次 * 100 条)>);
 
 const result = await hack.getGoodsById('<商品数字 id>', '<你的广告位 id>', <是否是天猫商品 (默认为否)>, <是否开启精确模式 (默认为是)>);
 ```

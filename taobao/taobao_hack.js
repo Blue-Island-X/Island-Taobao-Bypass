@@ -28,13 +28,13 @@ class TaobaoHack {
         var index = 1;
         let searchList = [];
         while (true) {
-            const searchResult = await this.taobaoClient.execute('taobao.tbk.dg.material.optional', { q: goodsInfo.title, adzone_id: adzoneId, page_no: index, page_size: 100, sort: 'match_des' });
+            const searchResult = await this.taobaoClient.execute('taobao.tbk.dg.material.optional', { q: `${goodsInfo.title}.`, adzone_id: adzoneId, page_no: index, page_size: 100, sort: 'match_des' });
             if (searchResult.error) {
                 return searchResult;
             }
             const searchInfo = searchResult.result_list.map_data;
             searchList.push.apply(searchList, searchInfo);
-            if (searchInfo.length !== 100 || index >= this.limit) {
+            if (searchInfo.length !== 100 || index - 1 >= this.limit) {
                 break;
             }
             else {
