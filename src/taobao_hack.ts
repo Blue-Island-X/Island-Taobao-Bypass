@@ -27,6 +27,7 @@ export class TaobaoHack {
 
             const searchInfo = searchResult.result_list.map_data;
             searchList.push.apply(searchList, searchInfo);
+
             if (searchInfo.length !== 100) {
                 break;
             } else{

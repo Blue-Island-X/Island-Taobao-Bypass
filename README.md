@@ -29,7 +29,9 @@
 
 ![淘宝联盟官方群友方法](https://raw.githubusercontent.com/Blue-Island-X/Island-Taobao-Hack/master/resource/DingTalk_YgbzJ7xGTW.png)
 
-我们可以通过标题 ``title`` 进行搜索，再根据卖家标识符 ``seller_id`` 再加上大图链接 ``pict_url`` 或者白底图链接 ``white_image`` 做一个匹配
+我们可以通过短标题 ``short_title`` 进行搜索，再根据卖家标识符 ``seller_id`` 再加上大图链接 ``pict_url`` 或者白底图链接 ``white_image`` 做一个匹配
+
+> P.S: 精确标题无法使用，淘宝联盟会不返回商品 id 等信息
 
 ## 3.如何安装
 
