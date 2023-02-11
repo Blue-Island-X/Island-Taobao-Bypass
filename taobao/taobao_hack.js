@@ -5,6 +5,12 @@ class TaobaoHack {
     constructor(client) {
         this.taobaoClient = client;
     }
+    equal(left, right) {
+        if (!left || !right) {
+            return false;
+        }
+        return left === right;
+    }
     async getGoodsById(goodsId, adzoneId, tmall = false, precise = true) {
         let goodsLink;
         if (tmall) {
@@ -49,7 +55,7 @@ class TaobaoHack {
              * 2. 商品白底图或主图与第一次搜索的相同 (或运算)
              * 3. 开启精确模式并且商品白底图或或主图与第二次搜索的相同 (或运算)
             */
-            if (goods.seller_id === goodsInfo.seller_id && ((goods.white_image === goodsInfo.white_image || goods.pict_url === goodsInfo.pict_url) || (precise && (goods.white_image === goodsInfo2.white_image || goods.pict_url === goodsInfo2.pict_url)))) {
+            if (goods.seller_id === goodsInfo.seller_id && ((this.equal(goods.white_image, goodsInfo.white_image) || this.equal(goods.pict_url, goodsInfo.pict_url)) || (precise && (this.equal(goods.white_image, goodsInfo2.white_image) || this.equal(goods.pict_url, goodsInfo2.pict_url))))) {
                 return goods;
             }
         }
