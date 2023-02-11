@@ -34,7 +34,7 @@
 ## 3.如何安装
 
 ```
-npm i island-taobao-hack --save
+npm i island-taobao-bypass --save
 ```
 
 > P.S: 本项目依赖于 [Island-Union-SDK](https://github.com/Blue-Island-X/Island-Union-SDK)
@@ -43,7 +43,7 @@ npm i island-taobao-hack --save
 
 ```TypeScript
 import island from 'island-union-sdk';
-import taobao from 'island-taobao-hack';
+import taobao from 'island-taobao-bypass';
 
 const client = new island.taobao.Client({
     appKey: '<你的 AppKey>',

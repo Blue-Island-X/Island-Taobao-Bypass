@@ -1,5 +1,5 @@
 const island = require('island-union-sdk');
-const taobao = require('../../island-taobao-hack');
+const taobao = require('../../island-taobao-bypass');
 
 const client = new island.taobao.Client({
     appKey: '********',
