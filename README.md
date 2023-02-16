@@ -1,4 +1,20 @@
-# 小蓝岛淘宝商品数字 id 转联盟字符 id 解决方案 (开源版)
+<h1 align="center">
+    <b>
+        <a href="https://github.com/Blue-Island-X"><img style="width:128px;" src="https://raw.githubusercontent.com/Blue-Island-X/Island-Taobao-Bypass/main/resource/logo.png" /></a><br>
+    </b>
+</h1>
+
+<p align="center">小蓝岛淘宝商品数字 id 转联盟字符 id 解决方案</p>
+
+<div align="center">
+
+[![npm version](https://img.shields.io/npm/v/island-taobao-bypass.svg?style=flat-square)](https://www.npmjs.org/package/island-taobao-bypass)
+[![install size](https://img.shields.io/badge/dynamic/json?url=https://packagephobia.com/v2/api.json?p=island-taobao-bypass&query=$.install.pretty&label=install%20size&style=flat-square)](https://packagephobia.now.sh/result?p=island-taobao-bypass)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/island-taobao-bypass?style=flat-square)](https://bundlephobia.com/package/island-taobao-bypass@latest)
+[![npm downloads](https://img.shields.io/npm/dm/island-taobao-bypass.svg?style=flat-square)](https://npm-stat.com/charts.html?package=island-taobao-bypass)
+[![Known Vulnerabilities](https://snyk.io/test/npm/island-taobao-bypass/badge.svg?style=flat-square)](https://snyk.io/test/npm/island-taobao-bypass)
+
+</div>
 
 ## 1.前情提要
 
@@ -45,10 +61,10 @@ npm i island-taobao-bypass --save
 ## 4.如何使用
 
 ```TypeScript
-import island from 'island-union-sdk';
+import union from 'island-union-sdk';
 import taobao from 'island-taobao-bypass';
 
-const client = new island.taobao.Client({
+const client = new union.taobao.Client({
     appKey: '<你的 AppKey>',
     secretKey: '<你的 SecretKey>'
 });
