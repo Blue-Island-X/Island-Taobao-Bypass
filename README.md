@@ -8,11 +8,11 @@
 
 <div align="center">
 
-[![npm version](https://img.shields.io/npm/v/island-taobao-bypass.svg?style=flat-square)](https://www.npmjs.org/package/island-taobao-bypass)
-[![install size](https://img.shields.io/badge/dynamic/json?url=https://packagephobia.com/v2/api.json?p=island-taobao-bypass&query=$.install.pretty&label=install%20size&style=flat-square)](https://packagephobia.now.sh/result?p=island-taobao-bypass)
-[![npm bundle size](https://img.shields.io/bundlephobia/minzip/island-taobao-bypass?style=flat-square)](https://bundlephobia.com/package/island-taobao-bypass@latest)
-[![npm downloads](https://img.shields.io/npm/dm/island-taobao-bypass.svg?style=flat-square)](https://npm-stat.com/charts.html?package=island-taobao-bypass)
-[![Known Vulnerabilities](https://snyk.io/test/npm/island-taobao-bypass/badge.svg?style=flat-square)](https://snyk.io/test/npm/island-taobao-bypass)
+[![npm version](https://img.shields.io/npm/v/@blueislandx/island-taobao-bypass.svg?style=flat-square)](https://www.npmjs.org/package/@blueislandx/island-taobao-bypass)
+[![install size](https://img.shields.io/badge/dynamic/json?url=https://packagephobia.com/v2/api.json?p=@blueislandx/island-taobao-bypass&query=$.install.pretty&label=install%20size&style=flat-square)](https://packagephobia.now.sh/result?p=@blueislandx/island-taobao-bypass)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@blueislandx/island-taobao-bypass?style=flat-square)](https://bundlephobia.com/package/@blueislandx/island-taobao-bypass@latest)
+[![npm downloads](https://img.shields.io/npm/dm/@blueislandx/island-taobao-bypass.svg?style=flat-square)](https://npm-stat.com/charts.html?package=@blueislandx/island-taobao-bypass)
+[![Known Vulnerabilities](https://snyk.io/test/npm/@blueislandx/island-taobao-bypass/badge.svg?style=flat-square)](https://snyk.io/test/npm/@blueislandx/island-taobao-bypass)
 
 </div>
 
@@ -53,7 +53,7 @@
 ## 3.如何安装
 
 ```
-npm i island-taobao-bypass --save
+npm i @blueislandx/island-taobao-bypass --save
 ```
 
 > P.S: 本项目依赖于 [Island-Union-SDK](https://github.com/Blue-Island-X/Island-Union-SDK)
@@ -61,8 +61,8 @@ npm i island-taobao-bypass --save
 ## 4.如何使用
 
 ```TypeScript
-import union from 'island-union-sdk';
-import taobao from 'island-taobao-bypass';
+import union from '@blueislandx/island-union-sdk';
+import taobao from '@blueislandx/island-taobao-bypass';
 
 const client = new union.taobao.Client({
     appKey: '<你的 AppKey>',
