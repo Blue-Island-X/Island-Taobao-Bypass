@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/Blue-Island-X/Island-Taobao-Bypass#readme",
   "dependencies": {
-    "island-union-sdk": "^1.0.6"
+    "@blueislandx/island-union-sdk": "^1.1.0"
   },
   "devDependencies": {
     "@types/crypto-js": "^4.1.1",
