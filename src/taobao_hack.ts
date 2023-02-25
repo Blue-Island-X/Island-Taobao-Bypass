@@ -1,10 +1,10 @@
-import island from 'island-union-sdk';
+import union from '@blueislandx/island-union-sdk';
 
 export class TaobaoHack {
     limit: number;
-    taobaoClient: InstanceType<typeof island.taobao.Client>;
+    taobaoClient: InstanceType<typeof union.taobao.Client>;
 
-    constructor(client: InstanceType<typeof island.taobao.Client>, limit: number = 10) {
+    constructor(client: InstanceType<typeof union.taobao.Client>, limit: number = 10) {
         this.taobaoClient = client;
         this.limit = limit;
     }
