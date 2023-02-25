@@ -1,6 +1,6 @@
 {
   "name": "@blueislandx/island-taobao-bypass",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Island (小蓝岛) 淘宝商品数字 id 转联盟字符 id 解决方案 (开源版)",
   "main": "taobao/index.js",
   "scripts": {
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/Blue-Island-X/Island-Taobao-Bypass#readme",
   "dependencies": {
-    "@blueislandx/island-union-sdk": "^1.1.0"
+    "@blueislandx/island-union-sdk": "^1.1.1"
   },
   "devDependencies": {
     "@types/crypto-js": "^4.1.1",
