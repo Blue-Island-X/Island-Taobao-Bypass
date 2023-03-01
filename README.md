@@ -68,7 +68,7 @@ const client = new union.taobao.Client({
     appKey: '<你的 AppKey>',
     secretKey: '<你的 SecretKey>'
 });
-const hack = new taobao.TaobaoHack(client, <最大搜索限制 (默认 10 次 * 100 条)>);
+const hack = new taobao.union.Hack(client, <最大搜索限制 (默认 10 次 * 100 条)>);
 
 const result = await hack.getGoodsById('<商品数字 id>', '<你的广告位 id>', <是否是天猫商品 (默认为否)>, <是否开启精确模式 (默认为是)>);
 ```

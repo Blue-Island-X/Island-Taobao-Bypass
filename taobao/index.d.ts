@@ -1,1 +1,1 @@
-export { TaobaoHack } from './taobao_hack';
+export * from './union';
